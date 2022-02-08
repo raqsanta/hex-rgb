@@ -41,6 +41,14 @@ function App() {
 
   function changeR(e) {
 
+    if(e.target.value>255){
+      e.target.value = 255
+    }
+
+    if(e.target.value<0){
+      e.target.value = 0
+    }
+
     setColor(
       {
         hexCode: '#' + getHex(e.target.value) + getHex(color.G) + getHex(color.B),
@@ -54,6 +62,14 @@ function App() {
 
   function changeG(e) {
 
+    if(e.target.value>255){
+      e.target.value = 255
+    }
+
+    if(e.target.value<0){
+      e.target.value = 0
+    }
+
     setColor(
       {
         hexCode: '#' + getHex(color.R) + getHex(e.target.value) + getHex(color.B),
@@ -66,6 +82,14 @@ function App() {
   }
 
   function changeB(e) {
+
+    if(e.target.value>255){
+      e.target.value = 255
+    }
+
+    if(e.target.value<0){
+      e.target.value = 0
+    }
 
     setColor(
       {
